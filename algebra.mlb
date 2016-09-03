@@ -1,0 +1,30 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+  src/algebra.sig
+  src/algebra.fun
+in
+  signature CATEGORY
+  signature FUNCTOR
+  signature APPLICATIVE
+  signature MONAD
+  signature TRAVERSABLE
+  signature TRAVERSABLE_UTIL
+  signature FOLDABLE
+  signature MONOID
+
+  functor MonadApplicative
+  functor MonadNotation
+  functor ApplicativeNotation
+  functor TraversableUtil
+  structure IdMonad
+  structure ListMonad
+  structure OptionMonad
+  functor ListMonoid
+  functor OptionTraversable
+  functor ListTraversable
+
+  structure FunctionCategory
+  functor OppositeCategory
+
+  functor CategoryFoldMap
+end

@@ -1,0 +1,28 @@
+Library
+  signature CATEGORY
+  signature FUNCTOR
+  signature APPLICATIVE
+  signature MONAD
+  signature FOLDABLE
+  signature TRAVERSABLE
+  signature TRAVERSABLE_UTIL
+  signature MONOID
+
+  functor MonadApplicative
+  functor MonadNotation
+  functor ApplicativeNotation
+  functor TraversableUtil
+  structure IdMonad
+  structure ListMonad
+  structure OptionMonad
+  functor ListMonoid
+  functor OptionTraversable
+  functor ListTraversable
+
+  structure FunctionCategory
+  functor OppositeCategory
+  functor CategoryFoldMap
+is
+  $/basis.cm
+  src/algebra.sig
+  src/algebra.fun

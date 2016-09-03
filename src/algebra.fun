@@ -95,3 +95,24 @@ struct
       (F.pure [])
 end
 
+structure FunctionCategory : CATEGORY =
+struct
+  type ('a, 'b) hom = 'a -> 'b
+
+  fun id x = x
+  val cmp = op o
+end
+
+
+functor OppositeCategory (C : CATEGORY) : CATEGORY =
+struct
+  type ('a, 'b) hom = ('b, 'a) C.hom
+  val id = C.id
+  fun cmp (f, g) = C.cmp (g, f)
+end
+
+functor CategoryFoldMap (structure C : CATEGORY and F : FOLDABLE) =
+struct
+  fun foldMap (f : 'a -> ('b, 'b) C.hom) =
+    F.foldr (fn (a, phi) => C.cmp (f a, phi)) C.id
+end
