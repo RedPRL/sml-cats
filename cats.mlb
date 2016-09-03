@@ -22,4 +22,8 @@ in
   functor ListMonoid
   functor OptionTraversable
   functor ListTraversable
+
+  structure FunctionCategory
+  functor OppositeCategory
+  functor CategoryFoldMap
 end

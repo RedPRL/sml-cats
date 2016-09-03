@@ -18,6 +18,10 @@ Library
   functor ListMonoid
   functor OptionTraversable
   functor ListTraversable
+
+  structure FunctionCategory
+  functor OppositeCategory
+  functor CategoryFoldMap
 is
   $/basis.cm
   src/algebra.sig
