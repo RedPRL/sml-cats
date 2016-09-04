@@ -10,7 +10,8 @@ end
 functor MonadNotation (M : MONAD) =
 struct
   fun >>= (x, f) = M.bind f x
-  fun >> m n = m >>= (fn _ => n)
+  fun *> m n = m >>= (fn _ => n)
+  fun <* m n = n *> m
 end
 
 functor FunctorNotation (F : FUNCTOR) =
