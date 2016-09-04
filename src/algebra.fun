@@ -9,7 +9,7 @@ end
 
 functor MonadNotation (M : MONAD) =
 struct
-  fun >>= (f, x) = M.bind f x
+  fun >>= (x, f) = M.bind f x
 end
 
 functor FunctorNotation (F : FUNCTOR) =
