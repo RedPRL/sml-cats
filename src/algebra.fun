@@ -13,9 +13,9 @@ struct
 
   fun when (b, m) =
     if b then
-      ret ()
-    else
       m
+    else
+      ret ()
 
   fun unless (b, m) =
     when (not b, m)
