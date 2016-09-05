@@ -3,11 +3,13 @@ Library
   signature FUNCTOR
   signature APPLICATIVE
   signature MONAD
+  signature MONAD_UTIL
   signature FOLDABLE
   signature TRAVERSABLE
   signature TRAVERSABLE_UTIL
   signature MONOID
 
+  functor MonadUtil
   functor MonadApplicative
   functor MonadNotation
   functor ApplicativeNotation

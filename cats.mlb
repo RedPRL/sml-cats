@@ -7,11 +7,13 @@ in
   signature FUNCTOR
   signature APPLICATIVE
   signature MONAD
+  signature MONAD_UTIL
   signature TRAVERSABLE
   signature TRAVERSABLE_UTIL
   signature FOLDABLE
   signature MONOID
 
+  functor MonadUtil
   functor MonadApplicative
   functor MonadNotation
   functor ApplicativeNotation

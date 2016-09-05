@@ -7,6 +7,20 @@ struct
   fun ap mf mx = bind (fn f => map f mx) mf
 end
 
+functor MonadUtil (M : MONAD) : MONAD_UTIL =
+struct
+  open M
+
+  fun when (b, m) =
+    if b then
+      ret ()
+    else
+      m
+
+  fun unless (b, m) =
+    when (not b, m)
+end
+
 functor MonadNotation (M : MONAD) =
 struct
   fun >>= (x, f) = M.bind f x

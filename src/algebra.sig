@@ -27,6 +27,14 @@ sig
   val bind : ('a -> 'b t) -> 'a t -> 'b t
 end
 
+signature MONAD_UTIL =
+sig
+  include MONAD
+
+  val when : bool * unit t -> unit t
+  val unless : bool * unit t -> unit t
+end
+
 signature TRAVERSABLE =
 sig
   type 'a t
