@@ -67,7 +67,7 @@ struct
   type 'a t = 'a list
 
   fun ret x = [x]
-  fun bind f = List.foldl (fn (x, ys) => ys @ f x) []
+  fun bind f l = let val r = List.foldl (fn (x, ys) => f x :: ys) [] l in List.concat (List.rev r) end
 end
 
 structure OptionMonad : MONAD =
