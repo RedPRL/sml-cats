@@ -61,3 +61,24 @@ sig
   val mul : t * t -> t
 end
 
+signature MEET_SEMILATTICE =
+sig
+  type t
+  val compare : t * t -> order option
+  val meet : t * t -> t
+end
+
+signature JOIN_SEMILATTICE =
+sig
+  type t
+  val compare : t * t -> order option
+  val join : t * t -> t
+end
+
+signature LATTICE =
+sig
+  type t
+  val compare : t * t -> order option
+  val meet : t * t -> t
+  val join : t * t -> t
+end
