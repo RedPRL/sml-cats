@@ -12,6 +12,9 @@ in
   signature TRAVERSABLE_UTIL
   signature FOLDABLE
   signature MONOID
+  signature MEET_SEMILATTICE
+  signature JOIN_SEMILATTICE
+  signature LATTICE
 
   functor MonadUtil
   functor MonadApplicative

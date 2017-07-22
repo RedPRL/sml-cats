@@ -8,6 +8,9 @@ Library
   signature TRAVERSABLE
   signature TRAVERSABLE_UTIL
   signature MONOID
+  signature MEET_SEMILATTICE
+  signature JOIN_SEMILATTICE
+  signature LATTICE
 
   functor MonadUtil
   functor MonadApplicative
